@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey and Poll Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Survey and Poll Platform</h1>
+    </header>
+    <main>
+        <section id="survey">
+            <h2>Create a Survey</h2>
+            <form id="surveyForm">
+                <label for="question">Question:</label>
+                <input type="text" id="question" required>
+                <button type="button" id="addOption">Add Option</button>
+                <div id="options">
+                    <input type="text" class="option" required>
+                </div>
+                <button type="submit">Create Survey</button>
+            </form>
+        </section>
+        <section id="poll">
+            <h2>Create a Poll</h2>
+            <form id="pollForm">
+                <label for="pollQuestion">Question:</label>
+                <input type="text" id="pollQuestion" required>
+                <button type="button" id="addPollOption">Add Option</button>
+                <div id="pollOptions">
+                    <input type="text" class="pollOption" required>
+                </div>
+                <button type="submit">Create Poll</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Survey and Poll Platform</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
