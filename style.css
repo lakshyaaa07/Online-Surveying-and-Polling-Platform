@@ -5,7 +5,35 @@
 }
 
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #002f4b, #dc4225);
+    color: white;
+}
 
+form {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #dc4225;
+    color: white;
+}
 
 
 #bd-theme::after {
