@@ -6,6 +6,10 @@
 
 
 
+/* In your CSS file */
+.navbar-brand.fs-3 {
+    color: white;
+}
 
 
 #bd-theme::after {
