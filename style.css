@@ -3,11 +3,19 @@
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+
+
+
+
 #bd-theme::after {
     content: none;
 }
-#header {
+#header{
     height: 100vh;
+    background-image: url(images/background.png);
+    background-position: centre;
+    background-size: cover;
     background-color: #3498db; /* Change the background color to something attractive */
     display: flex;
     flex-direction: column;

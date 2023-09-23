@@ -1,33 +1,21 @@
 
-  // Function to toggle dark mode
-  function toggleDarkMode() {
-    const darkModeIcon = document.getElementById("darkModeIcon");
-    const currentTheme = localStorage.getItem("theme");
+      document.addEventListener('DOMContentLoaded', function() {
+          const themeToggle = document.getElementById('bd-theme');
+          const themeText = document.getElementById('bd-theme-text');
 
-    if (currentTheme === "dark") {
-      document.body.classList.remove("dark-mode");
-      darkModeIcon.classList.remove("bi-sun");
-      darkModeIcon.classList.add("bi-moon");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.body.classList.add("dark-mode");
-      darkModeIcon.classList.remove("bi-moon");
-      darkModeIcon.classList.add("bi-sun");
-      localStorage.setItem("theme", "dark");
-    }
-  }
+          themeToggle.addEventListener('click', function() {
+              const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+              const newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
 
-  // Check if the user has a preferred theme
-  const userPreferredTheme = localStorage.getItem("theme");
+              document.documentElement.setAttribute('data-bs-theme', newTheme);
+              localStorage.setItem('theme', newTheme);
+              themeText.textContent = `Toggle theme (${newTheme})`;
+          });
 
-  // If userPreferredTheme is set to dark, enable dark mode
-  if (userPreferredTheme === "dark") {
-    document.body.classList.add("dark-mode");
-    const darkModeIcon = document.getElementById("darkModeIcon");
-    darkModeIcon.classList.remove("bi-moon");
-    darkModeIcon.classList.add("bi-sun");
-  }
-
-  // Add click event listener to the dark mode toggle button
-  const darkModeToggle = document.getElementById("darkModeToggle");
-  darkModeToggle.addEventListener("click", toggleDarkMode);
+          const savedTheme = localStorage.getItem('theme');
+          if (savedTheme) {
+              document.documentElement.setAttribute('data-bs-theme', savedTheme);
+              themeText.textContent = `Toggle theme (${savedTheme})`;
+          }
+      });
+      
