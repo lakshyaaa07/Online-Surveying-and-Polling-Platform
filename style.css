@@ -228,3 +228,10 @@ nav ul li a{
     max-width: 350px;
 }
 
+/* Dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+
+  
