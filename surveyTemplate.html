@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            
+              height: 100vh;
+              margin: 0;
+              background: linear-gradient(to bottom, #088edc, #280a64);
+              color: white;
+          }
+  
+          .container {
+              background-color: rgba(0, 0, 0, 0.5);
+              padding: 35px;
+              border-radius: 10px;
+              max-width: 600px; /* Set the maximum width for the form */
+              width: 100%; /* Take up the available width */
+              max-height: 800px;
+          }
+  
+          .form-group {
+              margin-bottom: 15px;
+          }
+  
+          label {
+              font-weight: bold;
+          }
+  
+          .btn {
+              background-color: #305ada;
+              color: white;
+
+          }
+  
+          h3 {
+              text-align: center;
+          }
+    </style>
+    <form id="industryForm" >
+        <div class="row mb-3">
+            <h2>What Industry does your Business belong to?</h2><br>
+          
+        </div>
+        
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0"></legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                Healthcare
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Technology
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  Food 
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  Education 
+                </label>
+              </div>
+           
+          </div>
+        </fieldset>
+        
+        <div class="row mb-3">
+            <div class="col-sm-10 offset-sm-2">
+                <a href="course.html"><button type="submit" [routerLink]="[myrouterLink]" class="btn btn-primary">Next</button></a>
+            </div>
+        </div>
+      </form>
+      <script>
+        document.getElementById("industryForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+            
+            const selectedIndustry = document.querySelector('input[name="gridRadios"]:checked');
+            
+            if (selectedIndustry) {
+                const selectedValue = selectedIndustry.value;
+                
+                // Define the mapping of industry values to page URLs
+                const industryPageMap = {
+                    'healthcare': 'healthcare.html',
+                    'technology': 'technology.html',
+                    'food': 'food.html',
+                    'education': 'education.html'
+                };
+
+                // Redirect to the selected industry's page
+                window.location.href = industryPageMap[selectedValue];
+            }
+        });
+    </script>
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

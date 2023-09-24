@@ -20,13 +20,7 @@
         <main class="main">
           <form action="#" method="GET" id="survey-form" class="survey" novalidate>
             
-            <div class="progressbar" tabindex="0" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-valuetext="Question 1 of 5: How long have you been using our product?">
-              <span class="progressbar__step active" aria-hidden="true"></span>
-              <span class="progressbar__step" aria-hidden="true"></span>
-              <span class="progressbar__step" aria-hidden="true"></span>
-              <span class="progressbar__step" aria-hidden="true"></span>
-              <span class="progressbar__step" aria-hidden="true"></span>
-            </div>
+            
       
             <section class="survey__panel survey__panel--current" aria-hidden="false" data-index="1" data-panel="firstPanel" data-requirement="option">
               <h2 class="survey__panel__question">
@@ -53,23 +47,14 @@
               <p class="error-message"></p>
             </section>
             <!-- Add these elements inside the survey__panel section -->
-<div class="survey__panel__bounds">
-  <div class="form-group">
-      <label for="lower-bound">Lower Bound:</label>
-      <input id="lower-bound" type="number" name="lower-bound" min="1" max="5" disabled>
-  </div>
-  <div class="form-group">
-      <label for="upper-bound">Upper Bound:</label>
-      <input id="upper-bound" type="number" name="upper-bound" min="1" max="5" disabled>
-  </div>
-</div>
+
 
 
             <div class="form-buttons">
               <button class="button" type="button" name="prev" disabled="disabled" aria-label="Previous" aria-hidden="true">
                 Prev
               </button>
-              <button class="button" type="button" name="next" aria-label="Next" aria-hidden="false">Next</button>
+              <a href="survey2.html"><button class="button" type="button" name="next" aria-label="Next" aria-hidden="false">Next</button></a>
               <button class="button" type="submit" id="submit" name="submit" disabled="disabled" aria-hidden="true">
                 Submit
               </button>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Survey</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Healthcare Survey</h2>
+        <form action="#" method="post">
+            <div class="question">
+                <label for="health-status">1. How would you describe your current health status?</label>
+                <input type="radio" name="health-status" value="excellent"> Excellent
+                <input type="radio" name="health-status" value="good"> Good
+                <input type="radio" name="health-status" value="fair"> Fair
+                <input type="radio" name="health-status" value="poor"> Poor
+            </div>
+            <div class="question">
+                <label for="doctor-visit">2. How often do you visit your doctor for check-ups?</label>
+                <input type="radio" name="doctor-visit" value="annually"> Annually
+                <input type="radio" name="doctor-visit" value="semi-annually"> Semi-Annually
+                <input type="radio" name="doctor-visit" value="quarterly"> Quarterly
+                <input type="radio" name="doctor-visit" value="rarely"> Rarely
+            </div>
+            <div class="question">
+                <label for="satisfaction">3. How satisfied are you with your healthcare provider?</label>
+                <input type="radio" name="satisfaction" value="very-satisfied"> Very Satisfied
+                <input type="radio" name="satisfaction" value="satisfied"> Satisfied
+                <input type="radio" name="satisfaction" value="neutral"> Neutral
+                <input type="radio" name="satisfaction" value="dissatisfied"> Dissatisfied
+                <input type="radio" name="satisfaction" value="very-dissatisfied"> Very Dissatisfied
+            </div>
+            <div class="question">
+                <label for="feedback">4. Do you have any additional feedback or comments about your healthcare experiences?</label>
+                <textarea name="feedback" rows="4" cols="50"></textarea>
+            </div>
+            <div class="submit-button">
+                <input type="submit" class="button" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

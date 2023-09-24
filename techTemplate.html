@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Industry Survey</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Technology Industry Survey</h2>
+        <form action="#" method="post">
+            <div class="question">
+                <label for="software-usage">1. Which software tools do you use in your daily work? (Check all that apply)</label>
+                <input type="checkbox" name="software-usage" value="microsoft-office"> Microsoft Office
+                <input type="checkbox" name="software-usage" value="adobe-creative-suite"> Adobe Creative Suite
+                <input type="checkbox" name="software-usage" value="salesforce"> Salesforce
+                <input type="checkbox" name="software-usage" value="others"> Others (Please specify):
+                <input type="text" name="other-software" placeholder="Specify other software">
+            </div>
+            <div class="question">
+                <label for="tech-preferences">2. What type of technology do you prefer for work? (Check all that apply)</label>
+                <input type="checkbox" name="tech-preferences" value="laptop"> Laptop
+                <input type="checkbox" name="tech-preferences" value="desktop"> Desktop
+                <input type="checkbox" name="tech-preferences" value="tablet"> Tablet
+                <input type="checkbox" name="tech-preferences" value="smartphone"> Smartphone
+            </div>
+            <div class="question">
+                <label for="feedback">3. Do you have any additional feedback or comments related to the technology industry?</label>
+                <textarea name="feedback" rows="4" cols="50"></textarea>
+            </div>
+            <div class="submit-button">
+                <input type="submit" class="button" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
