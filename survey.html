@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link href="survey.css" rel="stylesheet">
+
+</head>
+<body>
+
+      <div class="container">
+        <header class="header">
+          <h1 id="title" class="header__title">Survey Builder</h1>
+          <p id="description" class="header__description">
+            Craft Custom Surveys with Ease and Precision. 
+          </p>
+          <img src="https://res.cloudinary.com/alexandracaulea/image/upload/v1585333913/illustration_x46ict.svg" alt="" aria-hidden="true" class="illustration" />
+        </header>
+        <main class="main">
+          <form action="#" method="GET" id="survey-form" class="survey" novalidate>
+            
+            <div class="progressbar" tabindex="0" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-valuetext="Question 1 of 5: How long have you been using our product?">
+              <span class="progressbar__step active" aria-hidden="true"></span>
+              <span class="progressbar__step" aria-hidden="true"></span>
+              <span class="progressbar__step" aria-hidden="true"></span>
+              <span class="progressbar__step" aria-hidden="true"></span>
+              <span class="progressbar__step" aria-hidden="true"></span>
+            </div>
+      
+            <section class="survey__panel survey__panel--current" aria-hidden="false" data-index="1" data-panel="firstPanel" data-requirement="option">
+              <h2 class="survey__panel__question">
+                <span class="visuallyhidden">Question 1 of 5 </span>How do you want to Record the User Responses?
+              </h2>
+              <div class="survey__panel__period">
+                <div class="form-group">
+                  <input id="never" type="radio" name="question_1" value="never" />
+                  <label for="never">Star Ratings</label>
+                </div>
+                <div class="form-group">
+                  <input id="lessthenoneyear" type="radio" name="question_1" value="lessthenoneyear" />
+                  <label for="lessthenoneyear">Point Scales</label>
+                </div>
+                <div class="form-group">
+                  <input id="onetotwoyears" type="radio" name="question_1" value="onetotwoyears" />
+                  <label for="onetotwoyears">Satisfaction Slider</label>
+                </div>
+                <div class="form-group">
+                  <input id="morethentwoyears" type="radio" name="question_1" value="morethentwoyears" />
+                  <label for="morethentwoyears">Multiple Choices</label>
+                </div>
+              </div>
+              <p class="error-message"></p>
+            </section>
+            <!-- Add these elements inside the survey__panel section -->
+<div class="survey__panel__bounds">
+  <div class="form-group">
+      <label for="lower-bound">Lower Bound:</label>
+      <input id="lower-bound" type="number" name="lower-bound" min="1" max="5" disabled>
+  </div>
+  <div class="form-group">
+      <label for="upper-bound">Upper Bound:</label>
+      <input id="upper-bound" type="number" name="upper-bound" min="1" max="5" disabled>
+  </div>
+</div>
+
+
+            <div class="form-buttons">
+              <button class="button" type="button" name="prev" disabled="disabled" aria-label="Previous" aria-hidden="true">
+                Prev
+              </button>
+              <button class="button" type="button" name="next" aria-label="Next" aria-hidden="false">Next</button>
+              <button class="button" type="submit" id="submit" name="submit" disabled="disabled" aria-hidden="true">
+                Submit
+              </button>
+            </div>
+          </form>
+        </main>
+      </div>
+      <script>// JavaScript code to toggle the visibility of bounds inputs
+        const measurementMethodRadio = document.querySelectorAll('input[name="question_1"]');
+        const lowerBoundInput = document.getElementById('lower-bound');
+        const upperBoundInput = document.getElementById('upper-bound');
+        
+        measurementMethodRadio.forEach((radio) => {
+            radio.addEventListener('change', () => {
+                if (radio.value === 'star' || radio.value === 'point') {
+                    lowerBoundInput.disabled = false;
+                    upperBoundInput.disabled = false;
+                } else {
+                    lowerBoundInput.disabled = true;
+                    upperBoundInput.disabled = true;
+                }
+            });
+        });
+        
+           
+        </script>
+      
+      <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+      <script src="survey.js"></script>
+</body>
+</html>
