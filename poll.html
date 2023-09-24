@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Form</title>
+    <link rel="stylesheet" href="poll.css">
+</head>
+<body>
+    <div class="poll-container">
+        <h1>Vote in the Poll</h1>
+        <form id="poll-form" action="javascript:redirectPage();">
+            <label for="poll-options">Choose an option:</label>
+            <select id="poll-options" name="option">
+                <option value="option1">education-satisfaction</option>
+                <option value="option2">product-feedback</option>
+                <option value="option3">customer-service-rating</option>
+                <option value="option4">website-usability</option>
+                <option value="option4">event-feedback</option>
+                <option value="option4">event-feedback</option>
+                <option value="option4">environmental-impact</option>
+                <option value="option4">health-and-wellness</option>
+                <option value="option4">community-engagement</option>
+                <option value="option4">social-issues-awareness</option>
+            </select>
+            <button type="submit">Vote</button>
+        </form>
+    </div>
+
+    <script>
+        function redirectPage() {
+            var selectedOption = document.getElementById("poll-options").value;
+            var redirectURL = selectedOption + ".html"; // Construct the URL based on the selected option
+            window.location.href = redirectURL; // Redirect to the selected option's HTML page
+        }
+    </script>
+</body>
+</html>

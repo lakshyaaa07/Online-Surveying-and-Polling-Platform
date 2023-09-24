@@ -1,0 +1,48 @@
+/* option1.css (Styles for Option 1) */
+
+/* Styles for the result container */
+.result-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #007BFF, #0056b3); /* Blue gradient background */
+    color: #fff; /* Text color on a blue background */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styles for the heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the paragraph */
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the unordered list */
+ul {
+    list-style-type: disc;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+/* Styles for list items */
+li {
+    margin-bottom: 10px;
+}
+
+/* Styles for links within the content */
+a {
+    color: #fff; /* Link color on a blue background */
+    text-decoration: underline;
+}
+
+/* Styles for links on hover */
+a:hover {
+    text-decoration: none;
+}
