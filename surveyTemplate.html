@@ -39,78 +39,63 @@
           .btn {
               background-color: #305ada;
               color: white;
-
           }
   
           h3 {
               text-align: center;
           }
     </style>
-    <form id="industryForm" >
+    <form id="industryForm" action="#" onsubmit="return doSubmit(this)">
         <div class="row mb-3">
             <h2>What Industry does your Business belong to?</h2><br>
-          
         </div>
         
         <fieldset class="row mb-3">
-          <legend class="col-form-label col-sm-2 pt-0"></legend>
-          <div class="col-sm-10">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-              <label class="form-check-label" for="gridRadios1">
-                Healthcare
-              </label>
+            <legend class="col-form-label col-sm-2 pt-0"></legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="industry" value="healthcareTemplate.html">
+                    <label class="form-check-label" for="gridRadios1">
+                        Healthcare
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="industry" value="techTemplate.html">
+                    <label class="form-check-label" for="gridRadios2">
+                        Technology
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="industry" value="foodTemplate.html">
+                    <label class="form-check-label" for="gridRadios3">
+                        Food
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="industry" value="courseTemplate.html">
+                    <label class="form-check-label" for="gridRadios4">
+                        Education
+                    </label>
+                </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-              <label class="form-check-label" for="gridRadios2">
-                Technology
-              </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
-                  Food 
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
-                  Education 
-                </label>
-              </div>
-           
-          </div>
         </fieldset>
         
         <div class="row mb-3">
             <div class="col-sm-10 offset-sm-2">
-                <a href="course.html"><button type="submit" [routerLink]="[myrouterLink]" class="btn btn-primary">Next</button></a>
+                <button type="submit" class="btn btn-primary">Next</button>
             </div>
         </div>
-      </form>
-      <script>
-        document.getElementById("industryForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the form from actually submitting
-            
-            const selectedIndustry = document.querySelector('input[name="gridRadios"]:checked');
-            
+    </form>
+    
+    <script>
+        function doSubmit(form) {
+            var selectedIndustry = form.elements['industry'].value;
             if (selectedIndustry) {
-                const selectedValue = selectedIndustry.value;
-                
-                // Define the mapping of industry values to page URLs
-                const industryPageMap = {
-                    'healthcare': 'healthcare.html',
-                    'technology': 'technology.html',
-                    'food': 'food.html',
-                    'education': 'education.html'
-                };
-
-                // Redirect to the selected industry's page
-                window.location.href = industryPageMap[selectedValue];
+                window.location.href = selectedIndustry;
             }
-        });
+            return false;
+        }
     </script>
-      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
