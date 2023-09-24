@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Live Voting Poll</title>
+        <!-- Link to the default theme CSS file -->
+        <link rel="stylesheet" href="default-theme.css">
+    
+        <!-- Add links to theme1.css and theme2.css for Theme 1 and Theme 2 -->
+        <!-- Adjust file paths accordingly -->
+        <link rel="stylesheet" href="theme1.css">
+        <link rel="stylesheet" href="theme2.css">
+    
+        <!-- Link to your custom live-poll.css -->
+        <link rel="stylesheet" href="live-poll.css">
+    </head>
+<body>
+    <div class="poll-container">
+        <h1>Live Voting Poll</h1>
+        <form id="poll-form">
+            <label for="options">Choose an option:</label>
+            <select id="options" name="option">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+            <button type="button" onclick="vote()">Vote</button>
+            <!-- Add a "Show Leaderboard" button -->
+            <button id="show-leaderboard-button" onclick="showLeaderboard()">Show Leaderboard</button>
+        </form>
+        <div id="results">
+            <h2>Results:</h2>
+            <ul id="vote-counts">
+                <li>Option 1: <span id="option1-count">0</span> votes</li>
+                <li>Option 2: <span id="option2-count">0</span> votes</li>
+                <li>Option 3: <span id="option3-count">0</span> votes</li>
+                <li>Option 4: <span id="option4-count">0</span> votes</li>
+            </ul>
+        </div>
+    </div>
+
+<!-- "Change Theme" button -->
+
+
+<!-- Add this HTML section below your poll content -->
+<div class="theme-selector">
+    <label for="theme-select">Select Theme:</label>
+    <select id="theme-select" onchange="changeTheme()">
+        <option value="default-theme.css">Default Theme</option>
+        <option value="theme-1.css">Theme 1</option>
+        <option value="theme-2.css">Theme 2</option>
+        <!-- Add more theme options as needed -->
+    </select>
+</div>
+<button id="change-theme-button">Change Theme</button>
+<!-- Add this HTML section below your poll content -->
+<div id="end-screen" style="display: none;">
+    <h2>Thank you for participating!</h2>
+    <p>Your feedback is valuable to us.</p>
+    <!-- Add customizable content and styling here -->
+</div>
+
+<button id="show-end-button">Show End Screen</button>
+
+<script>
+    function showLeaderboard() {
+        // Open the leaderboard.html page in a new browser window or tab
+        window.open('leaderboard.html', '_blank');
+    }
+</script>
+
+<script>
+    // Function to show the end screen
+function showEndScreen() {
+    document.getElementById("end-screen").style.display = "block";
+}
+
+// Call the showEndScreen function when the poll is closed or when a user submits their vote
+// Example: call showEndScreen() after the vote is submitted or when the poll timer expires
+document.getElementById("show-end-button").addEventListener("click", function () {
+    showEndScreen();
+});
+
+</script>
+    <script>
+        function vote() {
+            var selectedOption = document.getElementById("options").value;
+            var countElement = document.getElementById(selectedOption + "-count");
+            var currentCount = parseInt(countElement.textContent);
+            countElement.textContent = currentCount + 1;
+        }
+    </script>
+
+<script>
+    // Function to change the theme
+    function changeTheme() {
+        const themeSelect = document.getElementById('theme-select');
+        const selectedTheme = themeSelect.value;
+        const themeLink = document.querySelector('link[rel="stylesheet"]');
+
+        // Update the href attribute of the stylesheet link to the selected theme
+        themeLink.href = selectedTheme;
+    }
+
+    // Add an event listener to the "Change Theme" button
+    const changeThemeButton = document.getElementById('change-theme-button');
+    changeThemeButton.addEventListener('click', function () {
+        changeTheme();
+    });
+</script>
+
+</body>
+</html>

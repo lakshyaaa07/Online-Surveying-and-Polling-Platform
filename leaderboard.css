@@ -1,0 +1,54 @@
+/* Styles for the leaderboard */
+.leaderboard-container {
+    background: linear-gradient(to bottom, #f0f0f0, #ccc); /* Gradient background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 600px;
+    overflow: hidden; /* Clip content within container */
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul#top-options {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul#top-options li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+ul#top-options li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+ul#top-options li span {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Custom styling for leaderboard entries */
+ul#top-options li:nth-child(even) {
+    background-color: #f5f5f5; /* Zebra-stripe effect */
+}
+
+/* Add hover effect with animation */
+ul#top-options li:hover {
+    background-color: #ffcc00; /* Highlight on hover */
+    transform: scale(1.05); /* Enlarge on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}

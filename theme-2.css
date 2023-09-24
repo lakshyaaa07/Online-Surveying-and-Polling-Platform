@@ -1,0 +1,44 @@
+/* Theme 2 Styles */
+body {
+    background-color: #007BFF; /* Blue background */
+    color: #fff; /* White text color */
+    font-family: "Roboto", Arial, sans-serif; /* Font family for Theme 2 */
+}
+
+/* Additional styles specific to Theme 2 */
+.header {
+    background-color: #333; /* Dark header background */
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* White text color for the header */
+}
+
+.button {
+    background-color: #ffcc00; /* Yellow button background */
+    color: #333; /* Dark text color for the button */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Transition for background color change */
+}
+
+.button:hover {
+    background-color: #ff9900; /* Darker yellow on hover */
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ffcc00; /* Yellow border */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Box shadow */
+}
+
+.container p {
+    line-height: 1.6;
+}
+
+/* Add more specific styles and animations as needed for Theme 2 */

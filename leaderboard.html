@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+<body>
+    <div class="leaderboard-container">
+        <h1>Leaderboard</h1>
+        <ul id="top-options">
+            <!-- JavaScript will populate this list -->
+        </ul>
+    </div>
+    
+    <script>
+        // Sample leaderboard data (replace with actual data)
+        var leaderboardData = [
+            { name: "Option 1", votes: 42 },
+            { name: "Option 2", votes: 55 },
+            { name: "Option 3", votes: 28 },
+            { name: "Option 4", votes: 37 }
+        ];
+    
+        // Function to populate the leaderboard
+        function populateLeaderboard() {
+            var topOptions = document.getElementById("top-options");
+            topOptions.innerHTML = "";
+    
+            leaderboardData.forEach(function (option) {
+                var listItem = document.createElement("li");
+                listItem.textContent = option.name + ": " + option.votes + " votes";
+                topOptions.appendChild(listItem);
+            });
+        }
+    
+        // Call the populateLeaderboard function initially to load the leaderboard
+        populateLeaderboard();
+    </script>
+    
+
+    <script>
+        // Function to show the leaderboard in a new window or tab
+function showLeaderboard() {
+    // Replace 'leaderboard.html' with the actual URL of your leaderboard page
+    const leaderboardPageURL = 'leaderboard.html';
+    
+    // Open the leaderboard page in a new browser window or tab
+    window.open('path/to/leaderboard.html', '_blank');
+
+}
+
+    </script>
+
+    <!-- Add this JavaScript code to your existing script section -->
+<script>
+    // Sample data (replace with actual vote counts)
+    var voteCounts = {
+        "option1": 42,
+        "option2": 55,
+        "option3": 28,
+        "option4": 37
+    };
+
+    // Function to update the leaderboard
+    function updateLeaderboard() {
+        var topOptions = document.getElementById("top-options");
+        topOptions.innerHTML = "";
+
+        // Sort options by vote count
+        var sortedOptions = Object.keys(voteCounts).sort(function (a, b) {
+            return voteCounts[b] - voteCounts[a];
+        });
+
+        // Display the top options in the leaderboard
+        for (var i = 0; i < sortedOptions.length; i++) {
+            var option = sortedOptions[i];
+            var listItem = document.createElement("li");
+            listItem.textContent = option + ": " + voteCounts[option] + " votes";
+            topOptions.appendChild(listItem);
+        }
+    }
+
+    // Call the updateLeaderboard function to display initial data
+    updateLeaderboard();
+</script>
+</body>
+</html>

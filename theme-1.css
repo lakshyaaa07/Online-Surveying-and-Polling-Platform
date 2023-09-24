@@ -1,0 +1,49 @@
+/* Theme 1 Styles */
+body {
+    background-color: #ffcc00;
+    color: #333;
+    font-family: "Arial", sans-serif;
+}
+
+/* Additional styles specific to Theme 1 */
+.header {
+    background-color: #ff9900;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transition for background color change */
+}
+
+.header:hover {
+    background-color: #ff6600; /* Change background color on hover */
+}
+
+.button {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Transition for background color change */
+}
+
+.button:hover {
+    background-color: #ff9900; /* Change background color on hover */
+    transform: scale(1.1); /* Scale the button on hover */
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease; /* Transition for border color change */
+}
+
+.container:hover {
+    border-color: #ff9900; /* Change border color on hover */
+}
+
+/* Add more specific styles and animations as needed for Theme 1 */
